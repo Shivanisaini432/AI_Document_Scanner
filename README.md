@@ -66,7 +66,7 @@ AI_Document_Scanner
 Clone the repository:
 
 ```
-git clone https://github.com/your-username/AI_Document_Scanner.git
+git clone https://github.com/Shivanisaini432/AI_Document_Scanner.git
 ```
 
 Move into the project directory:
