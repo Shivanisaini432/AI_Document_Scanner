@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 def preprocess_image(image):
     # Convert the image to grayscale
@@ -7,16 +8,24 @@ def preprocess_image(image):
     # Apply Gaussian blur to reduce noise
     blur = cv2.GaussianBlur(gray, (5, 5), 0)
     
-    # Apply adaptive thresholding to enhance text regions
-    threshold = cv2.adaptiveThreshold(blur,
-                                      255,
-                                      cv2.ADAPTIVE_THRESH_MEAN_C,
-                                      cv2.THRESH_BINARY,
-                                      11,
-                                      2)
+    # # Apply adaptive thresholding to enhance text regions
+    # threshold = cv2.adaptiveThreshold(blur,
+    #                                   255,
+    #                                   cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+    #                                   cv2.THRESH_BINARY,
+    #                                   11,
+    #                                   2)
     
-    return threshold
+    # return threshold
+    kernel = np.array([        
+        [0,-1,0],
+        [-1,5,-1],
+        [0,-1,0]
+    ])
 
+    sharpen = cv2.filter2D(gray, -1, kernel)
+
+    return sharpen
 
 
  
