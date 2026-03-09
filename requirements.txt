@@ -1,0 +1,9 @@
+streamlit
+opencv-python
+numpy
+pandas
+python-docx
+openpyxl
+paddleocr
+pdf2image
+ollama
