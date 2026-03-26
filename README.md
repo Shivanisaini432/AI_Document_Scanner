@@ -135,4 +135,5 @@ Possible improvements for the project:
 
 Shivani Saini
 
-Built using Python, OCR, and AI..
+Built using Python, OCR, and AI.
+
